@@ -19,8 +19,9 @@ export const Registro = () => {
     navigate("/");
   };
 
-  if (store.token && store.token != "" && store.token != undefined)
+  if (store.token && store.token != "" && store.token != undefined) {
     navigate("/");
+  }
 
   return (
     <div className="text-center">

@@ -57,6 +57,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             sessionStorage.setItem("token", data.access_token);
             setStore({
               token: data.access_token,
+              user: data.user,
             });
             alert("iniciado con exito");
             return true;

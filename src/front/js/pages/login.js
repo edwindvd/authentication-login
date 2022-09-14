@@ -14,8 +14,10 @@ export const Login = () => {
     navigate("/");
   };
 
-  if (store.token && store.token != "" && store.token != undefined)
+  if (store.token && store.token != "" && store.token != undefined) {
+    alert("Sesión Iniciada");
     navigate("/");
+  }
 
   return (
     <>
