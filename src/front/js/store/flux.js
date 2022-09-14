@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       message: null,
+      user: null,
       token: null,
       demo: [
         {
@@ -64,6 +65,37 @@ const getState = ({ getStore, getActions, setStore }) => {
           return false;
         } catch (error) {
           console.log("Ocurrio un error en el login");
+        }
+      },
+
+      registro: async (data) => {
+        const opt = {
+          method: "POST",
+          body: JSON.stringify({
+            email: data.email,
+            password: data.password,
+            is_active: data.checked,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        };
+
+        const baseurl = process.env.BACKEND_URL + "/api/registro";
+
+        try {
+          const resp = await fetch(baseurl, opt);
+          if (resp.status !== 200) {
+            alert("No se pudo registrar los datos");
+            return false;
+          }
+          const data = await resp.json();
+
+          alert("los datos se guardaron con exito");
+
+          return true;
+        } catch (error) {
+          console.log("Hubo un error al ingresar al login");
         }
       },
 
