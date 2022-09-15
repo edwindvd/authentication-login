@@ -13,33 +13,33 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-light bg-dark">
       <div className="container">
         <Link to="/">
-          <span className="navbar-brand mb-0 h1">
-            4Geeks Academy Login React
+          <span className="navbar-brand mb-0 h1 text-light">
+            Vamo a casa
           </span>
         </Link>
         <div className="ml-auto">
-          <Link to="/demo">
+          {/* <Link to="/demo">
             <button className="btn btn-dark border">
               Check the Context in action
             </button>
-          </Link>
+          </Link> */}
         </div>
         <form className="d-flex" role="search">
           {!store.token ? (
             <>
-              <Link className="nav-link text-dark" to="/registro">
+              <Link className="nav-link text-light" to="/registro">
                 Registrate
               </Link>
-              <Link className="nav-link text-dark" to="/login">
+              <Link className="nav-link text-light" to="/login">
                 Inicia sesión
               </Link>
             </>
           ) : (
             <>
-              <button className="btn btn-link text-dark" onClick={handleClick}>
+              <button className="btn btn-link text-light" onClick={handleClick}>
                 Cerrar sesión
               </button>
             </>

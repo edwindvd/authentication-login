@@ -59,7 +59,7 @@ export const Login = () => {
               >
                 Iniciar Sesión
               </button>
-              <h6 className="mt-4">Aún no eres miembro?</h6>
+              <h6 className="mt-4">Vamos registrate mf!!</h6>
               <Link className="p-2 mb-4" to="/registro">
                 Regístrate
               </Link>

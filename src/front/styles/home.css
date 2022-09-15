@@ -1,3 +1,9 @@
 .border {
   border-radius: 25px;
 }
+
+.body {
+  background-image: url("https://cdn.wallpapersafari.com/44/86/T4ebiD.jpg");
+  height:100%;
+    width: 100%;
+}
