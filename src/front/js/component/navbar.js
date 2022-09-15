@@ -17,7 +17,7 @@ export const Navbar = () => {
       <div className="container">
         <Link to="/">
           <span className="navbar-brand mb-0 h1 text-light">
-            Vamo a casa
+            LAS LEYENDAS NUNCA MUEREN
           </span>
         </Link>
         <div className="ml-auto">
